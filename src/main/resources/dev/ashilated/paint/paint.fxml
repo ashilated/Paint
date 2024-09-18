@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.control.ToggleButton?>
+
+<Pane fx:id="node" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: #DDDDDD;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.ashilated.paint.PaintController">
+    <MenuBar minWidth="-Infinity" prefWidth="720.0">
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem fx:id="newFile" mnemonicParsing="false" text="New" />
+            <MenuItem fx:id="saveFile" mnemonicParsing="false" text="Save" />
+        </Menu>
+    </MenuBar>
+    <GridPane alignment="BASELINE_CENTER" layoutX="15.0" layoutY="66.0" prefHeight="385.0" prefWidth="60.0" vgap="7.0">
+        <Spinner fx:id="brushSize" prefWidth="60.0" editable="true" />
+        <ToggleButton fx:id="paintbrush" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="P" textAlignment="CENTER" GridPane.rowIndex="1" />
+        <ToggleButton fx:id="eraser" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="E" textAlignment="CENTER" GridPane.rowIndex="2" />
+        <ToggleButton fx:id="bucket" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="S" textAlignment="CENTER" GridPane.rowIndex="3" />
+        <ToggleButton fx:id="eyedropper" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="I" textAlignment="CENTER" GridPane.rowIndex="4" />
+        <ToggleButton fx:id="rectangle" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="R" textAlignment="CENTER" GridPane.rowIndex="5" />
+        <ToggleButton fx:id="circle" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" text="C" textAlignment="CENTER" GridPane.rowIndex="6" />
+        <ColorPicker fx:id="colorPicker" editable="true" prefHeight="30.0" prefWidth="60.0" GridPane.rowIndex="7" />
+        <Button fx:id="undo" mnemonicParsing="false" text="&lt;" GridPane.halignment="LEFT" GridPane.rowIndex="8" />
+        <Button fx:id="redo" mnemonicParsing="false" text="&gt;" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
+      <columnConstraints>
+         <ColumnConstraints halignment="CENTER" />
+      </columnConstraints>
+    </GridPane>
+    <Pane layoutX="90.0" layoutY="50.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;">
+        <Canvas fx:id="canvas" height="400.0" width="600.0" />
+    </Pane>
+</Pane>
